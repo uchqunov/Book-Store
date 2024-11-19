@@ -1,1 +1,1 @@
-Yaqinda Kitob magazin qilamiz Nasriddinov bilan
+**Yaqinda Kitob magazin qilamiz Nasriddinov bilan**
