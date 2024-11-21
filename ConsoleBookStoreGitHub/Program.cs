@@ -7,18 +7,21 @@ namespace ConsoleBookStoreGitHub
 {
     internal class Program
     {
+        // int Id uchun
+        public static int SeqInt = 0;
+
         // Path lar
-        public static string bookPath = @"D:\BookStoreCRUD\Books.json";
-        public static string bookIDPath = @"D:\BookStoreCRUD\Books_ID.json";
+        public static string booksPath = @"D:\BookStoreCRUD\Books.json";
+        public static string booksIDPath = @"D:\BookStoreCRUD\Books_ID.json";
 
         // Kereli List yaratish
         public static List<Books> books = new List<Books>();
-        public static List<int> bookIDs = new List<int>();
+        public static List<int> booksIDs = new List<int>();
 
         static void Main(string[] args)
         {
             // Fayldan ko'chirish
-            using (StreamReader sr = new StreamReader(bookPath))
+            using (StreamReader sr = new StreamReader(booksPath))
             {
                 try
                 {
@@ -26,56 +29,120 @@ namespace ConsoleBookStoreGitHub
                 }
                 catch (Exception ex) { }
             }
-        }
-        public static void Update(ref List<Books> books, string path)
-        {
-            bool tryParse = false;
-            int id = -1;
-            while (!tryParse)
+
+            using (StreamReader sr = new StreamReader(booksIDPath))
             {
-                Read(ref books, path);
-                Console.Write("Id kiriting: ");
-                tryParse = int.TryParse(Console.ReadLine(), out id);
+                try
+                {
+                    booksIDs = JsonSerializer.Deserialize<List<int>>(booksIDPath);
+                }catch (Exception ex) { }
             }
 
-            Books book = books.Find(book => book.id == id);
-            if (book !=  null) 
+            // id ni maksimumini topish
+            if (booksIDs.Count > 0)
             {
-                Console.Write("Kitobni yangi Nomini kiriting: ");
-                book.name = Console.ReadLine();
+                SeqInt = booksIDs.Max();
+            }
 
-                bool tryParseForPrice = false;
-                int priceForBook = -1;
-                while (!tryParseForPrice)
+            //.... uyog'ini o'zila qilasila
+        }
+        public static int Seq()
+        {
+            SeqInt++;
+            booksIDs.Add(SeqInt);
+            Write(booksIDs, booksIDPath);
+            return SeqInt;
+        }
+        public static void Delete(ref List<Books> books, string path)
+        {
+            if (books.Count > 0)
+            {
+                bool tryParse = false;
+                int id = -1;
+                while (!tryParse)
                 {
-                    Console.Write("Kitob narxini kiriting(Son kiriting!): ");
-                    tryParseForPrice = int.TryParse(Console.ReadLine(), out priceForBook);
+                    foreach (var item in books)
+                    {
+                        Console.WriteLine($"ID: {item.id}, Name: {item.name}, Author: {item.authorName}, Price: {item.price}");
+                    }
+                    Console.Write("Id kiriting: ");
+                    tryParse = int.TryParse(Console.ReadLine(), out id);
                 }
-                book.price = priceForBook;
 
-                Write(books, path);
-                Console.WriteLine("Muvaffaqiyatli yangilandi!");
+                Books book = books.Find(book => book.id == id);
+                if (book != null)
+                {
+                    books.Remove(book);
+                    Write(books, path);
+
+                    Console.WriteLine("Kitob muvaffaqiyatli o'chirildi!");
+                }
+                else
+                {
+                    Console.WriteLine("Bunday ID yo'q!");
+                }
             }
             else
             {
-                Console.WriteLine("Bunday ID yo'q!");
+                Console.WriteLine("Bitta ham kitob yo'q! :(");
             }
         }
-        public static void Write(List<Books> books, string path)
+        public static void Update(ref List<Books> books, string path)
+        {
+            if (books.Count > 0)
+            {
+                bool tryParse = false;
+                int id = -1;
+                while (!tryParse)
+                {
+                    Read(ref books, path);
+                    Console.Write("Id kiriting: ");
+                    tryParse = int.TryParse(Console.ReadLine(), out id);
+                }
+
+                Books book = books.Find(book => book.id == id);
+                if (book != null)
+                {
+                    Console.Write("Kitobni yangi Nomini kiriting: ");
+                    book.name = Console.ReadLine();
+
+                    bool tryParseForPrice = false;
+                    int priceForBook = -1;
+                    while (!tryParseForPrice)
+                    {
+                        Console.Write("Kitob narxini kiriting(Son kiriting!): ");
+                        tryParseForPrice = int.TryParse(Console.ReadLine(), out priceForBook);
+                    }
+                    book.price = priceForBook;
+
+                    Write(books, path);
+                    Console.WriteLine("Muvaffaqiyatli yangilandi!");
+                }
+                else
+                {
+                    Console.WriteLine("Bunday ID yo'q!");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Bitta ham kitob yo'q! :(");
+            }
+        }
+        public static void Write<T>(List<T> list, string path)
         {
             using (StreamWriter sw = new StreamWriter(path))
             {
-                var booksSerialized = JsonSerializer.Serialize(books);
+                var serializedList = JsonSerializer.Serialize(list);
 
-                sw.WriteLine(booksSerialized);
+                sw.WriteLine(serializedList);
             }
         }
         public static void Read(ref List<Books> books, string path)
         {
-            books = null;
-            using (StreamReader sr = new StreamReader(path))
+            if (books.Count > 0)
             {
-                try
+                books = null;
+                using (StreamReader sr = new StreamReader(path))
                 {
                     books = JsonSerializer.Deserialize<List<Books>>(sr.ReadToEnd());
                     foreach (var book in books)
@@ -83,7 +150,10 @@ namespace ConsoleBookStoreGitHub
                         Console.WriteLine($"ID: {book.id}, Name: {book.name}, Author: {book.authorName}, Price: {book.price}");
                     }
                 }
-                catch (Exception ex) { }
+            }
+            else
+            {
+                Console.WriteLine("Bitta ham kitob yo'q! :(");
             }
         }
         public class Books
