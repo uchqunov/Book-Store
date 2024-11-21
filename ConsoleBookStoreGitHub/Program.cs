@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Yangi o'zgarishlar!");
+            Console.WriteLine("Develop branchidan ovommiz!");
         }
     }
 }
