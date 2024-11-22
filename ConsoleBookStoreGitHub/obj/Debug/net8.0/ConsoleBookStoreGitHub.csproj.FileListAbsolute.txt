@@ -1,0 +1,15 @@
+D:\ForGitHub\Book-Store\ConsoleBookStoreGitHub\bin\Debug\net8.0\ConsoleBookStoreGitHub.exe
+D:\ForGitHub\Book-Store\ConsoleBookStoreGitHub\bin\Debug\net8.0\ConsoleBookStoreGitHub.deps.json
+D:\ForGitHub\Book-Store\ConsoleBookStoreGitHub\bin\Debug\net8.0\ConsoleBookStoreGitHub.runtimeconfig.json
+D:\ForGitHub\Book-Store\ConsoleBookStoreGitHub\bin\Debug\net8.0\ConsoleBookStoreGitHub.dll
+D:\ForGitHub\Book-Store\ConsoleBookStoreGitHub\bin\Debug\net8.0\ConsoleBookStoreGitHub.pdb
+D:\ForGitHub\Book-Store\ConsoleBookStoreGitHub\obj\Debug\net8.0\ConsoleBookStoreGitHub.GeneratedMSBuildEditorConfig.editorconfig
+D:\ForGitHub\Book-Store\ConsoleBookStoreGitHub\obj\Debug\net8.0\ConsoleBookStoreGitHub.AssemblyInfoInputs.cache
+D:\ForGitHub\Book-Store\ConsoleBookStoreGitHub\obj\Debug\net8.0\ConsoleBookStoreGitHub.AssemblyInfo.cs
+D:\ForGitHub\Book-Store\ConsoleBookStoreGitHub\obj\Debug\net8.0\ConsoleBookStoreGitHub.csproj.CoreCompileInputs.cache
+D:\ForGitHub\Book-Store\ConsoleBookStoreGitHub\obj\Debug\net8.0\ConsoleBookStoreGitHub.sourcelink.json
+D:\ForGitHub\Book-Store\ConsoleBookStoreGitHub\obj\Debug\net8.0\ConsoleBookStoreGitHub.dll
+D:\ForGitHub\Book-Store\ConsoleBookStoreGitHub\obj\Debug\net8.0\refint\ConsoleBookStoreGitHub.dll
+D:\ForGitHub\Book-Store\ConsoleBookStoreGitHub\obj\Debug\net8.0\ConsoleBookStoreGitHub.pdb
+D:\ForGitHub\Book-Store\ConsoleBookStoreGitHub\obj\Debug\net8.0\ConsoleBookStoreGitHub.genruntimeconfig.cache
+D:\ForGitHub\Book-Store\ConsoleBookStoreGitHub\obj\Debug\net8.0\ref\ConsoleBookStoreGitHub.dll

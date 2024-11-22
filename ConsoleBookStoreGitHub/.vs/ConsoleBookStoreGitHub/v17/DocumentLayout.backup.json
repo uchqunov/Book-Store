@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\GitHubProjects\\Book-Store\\ConsoleBookStoreGitHub\\",
+  "WorkspaceRootPath": "D:\\ForGitHub\\Book-Store\\ConsoleBookStoreGitHub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9A8C3AE1-8128-4542-8F37-80C506501AA5}|ConsoleBookStoreGitHub.csproj|d:\\githubprojects\\book-store\\consolebookstoregithub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9A8C3AE1-8128-4542-8F37-80C506501AA5}|ConsoleBookStoreGitHub.csproj|d:\\forgithub\\book-store\\consolebookstoregithub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A8C3AE1-8128-4542-8F37-80C506501AA5}|ConsoleBookStoreGitHub.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,17 +18,17 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\GitHubProjects\\Book-Store\\ConsoleBookStoreGitHub\\Program.cs",
+              "DocumentMoniker": "D:\\ForGitHub\\Book-Store\\ConsoleBookStoreGitHub\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\GitHubProjects\\Book-Store\\ConsoleBookStoreGitHub\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAowDgAAAA9AAAAAAAAAA==",
+              "ToolTip": "D:\\ForGitHub\\Book-Store\\ConsoleBookStoreGitHub\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AgIAABQAAAAAAAAAAAAzwCgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T12:21:53.83Z",
               "EditorCaption": ""

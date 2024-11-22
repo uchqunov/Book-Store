@@ -20,7 +20,7 @@ namespace ConsoleBookStoreGitHub
 
         static void Main(string[] args)
         {
-            // Fayldan ko'chirish
+            //Fayldan ko'chirish
             using (StreamReader sr = new StreamReader(booksPath))
             {
                 try
@@ -35,7 +35,8 @@ namespace ConsoleBookStoreGitHub
                 try
                 {
                     booksIDs = JsonSerializer.Deserialize<List<int>>(booksIDPath);
-                }catch (Exception ex) { }
+                }
+                catch (Exception ex) { }
             }
 
             // id ni maksimumini topish
@@ -44,8 +45,43 @@ namespace ConsoleBookStoreGitHub
                 SeqInt = booksIDs.Max();
             }
 
+
+
+            // bu kodim manda ishlamadi negadir ozizam 1 ishlatb korinchi 
+
+            //while (true)
+            //{
+            //    Console.WriteLine("1 - Write\n2 - Read\n3 - Update\n4 - Delete");
+            //    int a = int.Parse(Console.ReadLine());
+            //    switch (a)
+            //    {
+            //        case 1: Create(); break;
+            //        case 2: Read(ref books, booksPath); break;
+            //        case 3: Update(ref books, booksPath); break;
+            //        case 4: Delete(ref books, booksPath); break;
+            //    }
+            //}
             //.... uyog'ini o'zila qilasila
         }
+        public static void Create()
+        {
+            Books book = new Books();
+            Console.Write("Enter book name: ");
+            book.name = Console.ReadLine();
+            book.id = Seq();
+            Console.Write("Enter author name: ");
+            book.authorName = Console.ReadLine();
+            Console.Write("Enter book's price ");
+            book.price = int.Parse(Console.ReadLine());
+            books.Add(book);
+            using (StreamWriter sw = new StreamWriter(booksPath))
+            {
+                string sr = JsonSerializer.Serialize(books);
+                sw.WriteLine(sr);
+            }
+            Console.WriteLine("Book succesfuly added!");
+        }
+
         public static int Seq()
         {
             SeqInt++;

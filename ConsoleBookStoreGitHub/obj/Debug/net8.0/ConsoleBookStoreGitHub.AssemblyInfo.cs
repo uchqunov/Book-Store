@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConsoleBookStoreGitHub")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e770f9c337520eae22012114d69ad34572a3b353")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e4e1fc01cc1e1080b299070e31f7d1bc5ae90ae")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConsoleBookStoreGitHub")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConsoleBookStoreGitHub")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
