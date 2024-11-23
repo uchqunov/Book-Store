@@ -1,1 +1,1 @@
-**Kitob Magazin qilish boshlandi!** **Push try**
+**Kitob Magazin qilish boshlandi!** 
