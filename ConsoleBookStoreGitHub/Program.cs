@@ -63,22 +63,20 @@ namespace ConsoleBookStoreGitHub
             //}
             //.... uyog'ini o'zila qilasila
         }
-        public static void Create()
+        public static void Create(ref List<Books> books, string path)
         {
             Books book = new Books();
+
             Console.Write("Enter book name: ");
             book.name = Console.ReadLine();
             book.id = Seq();
             Console.Write("Enter author name: ");
             book.authorName = Console.ReadLine();
-            Console.Write("Enter book's price ");
+            Console.Write("Enter book's price: ");
             book.price = int.Parse(Console.ReadLine());
+
             books.Add(book);
-            using (StreamWriter sw = new StreamWriter(booksPath))
-            {
-                string sr = JsonSerializer.Serialize(books);
-                sw.WriteLine(sr);
-            }
+            Write(books, path);
             Console.WriteLine("Book succesfuly added!");
         }
 
