@@ -1,1 +1,1 @@
-**Kitob Magazin qilish boshlandi!** **Boshlandi**
+**Kitob Magazin qilish boshlandi!**
